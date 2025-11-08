@@ -24,9 +24,9 @@ namespace CSRF_API.Controllers
             Response.Cookies.Append("session_user", user, new CookieOptions
             {
                 HttpOnly = true,
-                SameSite = SameSiteMode.Lax, // Permite cookies en requests del mismo sitio y navegación
-                // Secure = false (for local http)
-                Path = "/", // Asegurar que la cookie esté disponible en toda la aplicación
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Path = "/",
             });
 
             var html = $@"<html><body>
