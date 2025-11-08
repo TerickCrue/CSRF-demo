@@ -18,6 +18,8 @@ builder.Services.AddCors(options =>
                 "http://localhost:5500",
                 "http://localhost:3000",
                 "http://127.0.0.1:3000",
+                "http://127.0.0.1:5000",
+                "http://127.0.0.1:5500",
                 "null" // Para file://
               )
               .AllowAnyMethod()
@@ -58,6 +60,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Configurar puerto 5029 para que coincida con el script de inicio
-app.Urls.Add("http://localhost:5029");
+//app.Urls.Add("http://localhost:5029");
 
 app.Run();
