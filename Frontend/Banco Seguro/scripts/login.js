@@ -1,11 +1,10 @@
 // Configuración del backend
-const API_BASE_URL = 'http://localhost:5029/api';
+const API_BASE_URL = 'https://localhost:44321/api';
 
 const loginForm = document.getElementById('loginForm');
 const errorMessage = document.getElementById('errorMessage');
 
 // Credenciales hardcoded (para validación en frontend)
-// En producción, esto debería validarse en el backend
 const VALID_USERNAME = 'juan';
 const VALID_PASSWORD = '123';
 
@@ -31,7 +30,7 @@ loginForm.addEventListener('submit', async function(e) {
                 localStorage.setItem('username', username);
                 
                 // Redirigir al dashboard
-                window.location.href = 'dashboard.html';
+                window.location.href = './dashboard.html';
             } else {
                 // Error en el backend
                 showError('Error al conectar con el servidor');

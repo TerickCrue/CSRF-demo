@@ -1,5 +1,5 @@
 // Configuración del backend
-const API_BASE_URL = 'http://localhost:5029/api';
+const API_BASE_URL = 'https://localhost:44321/api';
 
 // Verificar si hay sesión activa (verificando con el backend)
 async function checkSession() {
